@@ -12,10 +12,17 @@ import java.util.GregorianCalendar;
  * @author Carlos
  */
 public class Empleado {
-    private String dui;
+    String dui;
     private String nombres;
-    private String apellidos;
+    String apellidos;
     protected GregorianCalendar fechaIngreso;
+    
+     public Empleado () {
+        dui = "00000000";
+        nombres = "NN";
+        apellidos = "NA";
+        fechaIngreso = new java.util.GregorianCalendar(1800,0,1);
+    }
 
     public Empleado(String dui, String nombres, String apellidos, GregorianCalendar fechaIngreso) {
         this.dui = dui;
