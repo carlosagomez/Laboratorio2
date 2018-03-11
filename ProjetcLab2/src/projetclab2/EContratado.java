@@ -10,7 +10,7 @@ import java.util.GregorianCalendar;
 
 /**
  *
- * @author cony0
+ * @author DiegoAlexanderDimasVasquez
  */
 public class EContratado extends Empleado {
     private float salarioB;

@@ -5,32 +5,43 @@
  */
 package projetclab2;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Carlos
  */
+import projetclab2.Empleado; 
+import java.util.ArrayList; 
+
+
 public class Listempleados {
     private ArrayList listaE;
-    private int posicion;
-    
-    public Listempleados(){
+    private int posicion; // Última posición.
+
+    public Listempleados () {
         listaE = new ArrayList();
         posicion = -1;
     }
-    
-    
-    public void addEmpleado (Empleado empleado){
+
+    public void addEmpleado (Empleado empleado) {
         listaE.add(empleado);
         ++posicion;
     }
-    
-    public Empleado getEmpleado (int pos){
-        if(pos >= 0 && pos <=posicion)
-            return (Empleado) listaE.get(pos);
+
+    public Empleado getEmpleado (int pos) {
+        if(pos>=0 && pos<=posicion)
+            return listaE.get(pos);
         return null;
-        
-        
+    }
+
+    public int getPosicion () {
+        return posicion;
+    }
+
+    @Override
+    public String toString () {
+        String cadena = "";
+        for(int i=0; i<=posicion; i++)
+            cadena += "\n\tEmpleado " + (i+1) + ":\n" + listaE.get(i);
+        return cadena;
     }
 }
