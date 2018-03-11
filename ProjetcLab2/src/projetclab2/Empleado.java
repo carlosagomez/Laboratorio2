@@ -54,5 +54,12 @@ public class Empleado {
 
     public void setFechaIngreso(GregorianCalendar fechaIngreso) {
         this.fechaIngreso = fechaIngreso;
-    }    
+    }  
+
+    @Override
+    public String toString() {
+        return "Empleado{" + "dui=" + dui + ", nombres=" + nombres + ", apellidos=" + apellidos + ", fechaIngreso=" + fechaIngreso + '}';
+    }
+    
+    
 }
