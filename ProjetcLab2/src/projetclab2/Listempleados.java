@@ -27,7 +27,7 @@ public class Listempleados {
         ++posicion;
     }
 
-    public Empleado getEmpleado (int pos) {
+    public Object getEmpleado (int pos) {
         if(pos>=0 && pos<=posicion)
             return listaE.get(pos);
         return null;
